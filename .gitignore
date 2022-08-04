@@ -4,10 +4,6 @@ __pycache__/
 *$py.class
 
 
-# My Ignore stuff
-.Temp/
-
-
 # C extensions
 *.so
 
@@ -132,3 +128,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# My Ignore stuff
+.Temp/
+.vscode/settings.json
+/Folder_Zip_Test
+Folder_Zip_Test-Output.zip

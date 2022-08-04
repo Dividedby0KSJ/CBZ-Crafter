@@ -30,7 +30,6 @@ Start_Up_Layout = [
     ]
 
 
-
 # Create the Window
 Start_Up_Window = sg.Window('Window Title', Start_Up_Layout,  size=(800,450), font=(Body_Text), element_justification='center')
 
@@ -88,7 +87,12 @@ while True:
     if event == "Next_Button":
         if values["CBZ_EnableMetadata"] == True:
             Metadata_Enabled = True
+            # 
+            # 
         else:
             Metadata_Enabled = False
+        
+        FolderDir = values["CBZ_Folder"]
+
         break
         
