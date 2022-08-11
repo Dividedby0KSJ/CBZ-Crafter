@@ -53,9 +53,12 @@ Folder_Browser_Layout = [
     [sg.Input(key="CBZ_Folder", default_text="C:/Example Folder/Volume 1"), sg.FolderBrowse('Browse')]
 ]
 
+[sg.Text(':'), sg.Input(key="Metadata_", default_text="")],
 
 Folder_Metadata_Layout = [
-    [sg.Text('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')]
+    [sg.Text('Title of the book:'), sg.Input(key="Metadata_Title", default_text="Comic Name")],
+    [sg.Text('Summary for the book:'), sg.Input(key="Metadata_Summary", default_text="This is a cool comic")],
+    [sg.Text(':'), sg.Input(key="Metadata_", default_text="")],
 ]
 
 
@@ -87,12 +90,13 @@ while True:
     if event == "Next_Button":
         if values["CBZ_EnableMetadata"] == True:
             Metadata_Enabled = True
-            # 
+            print("MetaData was true")
             # 
         else:
             Metadata_Enabled = False
         
         FolderDir = values["CBZ_Folder"]
+        print(FolderDir)
 
         break
         
